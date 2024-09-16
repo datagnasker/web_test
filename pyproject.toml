@@ -4,6 +4,7 @@ version = "0.1"
 description = "Til opbevaring a bits"
 dependencies = [
     "flask",
+    "python-dotenv",
 ]
 
 [build-system]

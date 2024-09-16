@@ -19,7 +19,9 @@ def favicon():
 
 @app.route('/login', methods=['GET', 'POST'])
 def login():
+    print(app.config['USERNAME'])
+    print(app.config['PASSWORD'])
     if request.method == 'POST':
-        if request.form['username'] == 'bit' and request.form['password'] == 'frost123':
+        if request.form['username'] == app.config['USERNAME'] and request.form['password'] == app.config['PASSWORD']:
             return redirect(f'/{app.config["SECRET"]}')
     return render_template('login.html')

@@ -5,6 +5,7 @@ description = "Til opbevaring a bits"
 dependencies = [
     "flask",
     "python-dotenv",
+    "gunicorn",
 ]
 
 [build-system]
